@@ -1,0 +1,11 @@
+<meta>
+	<info author="MegasXLR" version="2.1.0" name="Ghost Racer Spectator" description="Adds the ability to spectate the ghost racer on maps. And some extra things." type="script" />
+	<script src="ghostspectate_client_main.lua" type="client" />
+	<script src="ghostspectate_client_utilities.lua" type="client" />
+	<script src="ghostspectate_server_main.lua" type="server" />
+	<script src="ghostspectate_server_utilities.lua" type="server" />
+	<file src="arrow.png" />
+	<script src="ghostspectate_client_extras.lua" type="client" />
+	<script src="ghostspectate_client_settings.lua" type="client" />
+	<script src="ghostspectate_client_commands.lua" type="client" />
+</meta>

@@ -1,0 +1,8 @@
+<meta>
+	<info name="Autoteams Manager" author="fabienwang" type="script" version="1.2" />
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+	<settings>
+		<setting name="*noEmptyTeams" value="true" friendlyname="No empty teams" group="Main" accept="true/false" desc="If enabled, this will remove teams that have no players and only create a team as soon as a player joins it. This setting might not take effect immediately." />
+	</settings>
+</meta>

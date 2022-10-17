@@ -1,0 +1,9 @@
+<meta>
+	<info name="Color" description="RGB COLORS FOR CARS" author="[SSP]Clark_Kent, fixed by [uDka]lukum" type="script"  version="0.1.1"/>
+	<script src="color_server.lua" type="server"/>
+	<script src="color_client.lua" type="client"/>
+    <script src="colorpicker/colorpicker.lua" type="client" />	
+	<file src="colorpicker/palette.png" />
+	<file src="colorpicker/alpha.png" />
+	<export function="openColorPicker" />
+</meta>

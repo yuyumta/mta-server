@@ -1,0 +1,7 @@
+-- USAGE --
+
+1. Start a map which has a ghost file.
+2. Wait for the countdown to end.
+3. Press 'G' to start spectating the ghost racer. Press again to continue playing.
+4. You cannot initiate ghost spectate unless you are in 'alive' state.
+5. As long as you're spectating the ghost you cannot switch to the normal 'spectating' state.

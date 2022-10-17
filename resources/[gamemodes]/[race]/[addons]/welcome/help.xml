@@ -1,0 +1,82 @@
+<help popup="yes">
+Welcome to my server.
+Below is a categorised description of all the plugins currently installed.
+
+
+#### HANDLING ####
+AllWheels - plugin for changing wheels.
+/wheels [default|offroad] - changes wheels.
+
+
+#### VISIBILITY ####
+carhider - a resource to hide/unhide your fellow racers.
+/carhide - toggle for the resource to do its thing.
+
+carfade - a resource to "fade" your fellow racers.
+/carfade - toggle for the resource to do its thing.
+
+time - a resource for changing the time of day client side. Note: this resource also resets weather if the weather ID exceeds 20.
+/day - sets time to 12.
+/night - sets the time to 24.
+/day [auto] - sets time to 12 automatically at the start of each map.
+/night [auto] - sets the time to 24 automatically at the start of each map.
+
+#### UI ####
+race_delay_indicator - a resource that shows you some time comparisons.
+/cpdelays 	   - toggle the resource on and off.
+/setdelaypos [x y] - change the text position.
+
+race_traffic_sensor - displays arrows on screen pointing to nearby race traffic. By default it is hidden with carhide enabled. Use the "always" option to bypass this.
+/trafficsensor - toggle for the resource to do its thing.
+/trafficsensor [always] - always show the sensor.
+
+yuyu-speedometer - a "digital" speedometer resource based on blue-speedometer and nos2.
+/speedometer [off|on] 	 - hides/unhides the speedometer.
+/reset_speedometer 	 - resets the speedometer to its default configuration.
+/move_speedometer 	 - allows you to change the speedometer's position on the screen using the mouse.
+/scale_speedometer [number] - lets you change the size of the speedometer. It is a multiplier. The defualt value is 1.
+/font_speedometer [fontname|leave blank for a list of options] - lets you change the font the speedometer is using.
+
+race_nos3 - a commonly used nos resource, somewhat modified for this server.
+/nos [normal|nfs|hybrid] - sets nos firing style.
+/nossustain [off|off] 	 - no clue.
+/nosgauge [off|on] 	 - hides/unhides the nos gauge.
+/reset_nosgauge 	 - resets the nos gauge to its default configuration.
+/move_nosgauge 		 - allows you to change the position of the nos gauge's position on the screen using the mouse.
+/scale_nosgauge 	 - to be implemented.
+
+
+#### PERSONALISATION ####
+carcolorpicker - a resource to color your car with.
+/color - open the color picker's menu.
+
+skins_selector - a resource to change your character's skin.
+/skin [id] - changes your skin to the specified id.
+
+
+#### MISC ####
+race_league - a resource for managing clan wars.
+/r     - announce that your team is ready (team captains only).
+/f     - announce that you want to redo the current round (team captains only).
+/haha  - make fun of the enemy team (team captains only).
+/gg    - gg (team captains only).
+/newtr - start a new match (admins only).
+/endtr - end the current match (admins only).
+/fun   - set the current round to be a fun round (admins only).
+
+randomcwmapfilter - starts a random map from a predefined filter. You can change the filter by doubleclicking on the resource in the admin panel.
+/randomcw - picks a map (admins only).
+
+ghost - a recorded ghost of the fastest drive on any given map.
+/toggleghost - toggle to hide/unhide the ghost driver.
+/deleteghost - delete ghost (admins only)
+
+car_radio_system - a radio resource that allows online streaming. Make sure you allow your MTA settings to output custom sounds if you wish to hear the radio.
+/radio - enables or disables the radio.
+
+one_spawn - self explanatory.
+
+removerandomobjects - self explanatory.
+
+bridgefix - fixes collisions on the infamous "red bridge".
+</help>

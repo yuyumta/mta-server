@@ -1,0 +1,86 @@
+-- INSTALLATION INSTRUCTIONS --
+1. Stop your server.
+2. Go to 'server-mods-deathmatch' and open the 'acl.xml' file.
+3. Under the 'Admin' group around the start of the file add the following two lines:
+
+	<object name="resource.race_ghost_spectate"></object>
+        <object name="resource.race_ghost"></object>
+
+4. Save the 'acl.xml' file.
+5. Start your server (or continue with steps 6 to 18 before starting it up again).
+6. Unzip the 'race_ghost_spectate' folder from this zip and put it in 'server-mods-deathmatch-resources-[gamemodes]-[race]-[addons]'.
+7. Go to 'server-mods-deathmatch-resources-[gamemodes]-[race]-race.zip-race_client.lua'.
+8. Find the function called 'function spectate()'.
+9. Replace it with the below code:
+
+	function spectate()
+		local isSpectatingGhost = getElementData(localPlayer, "isSpectatingGhost")
+		if isSpectatingGhost == true then
+			outputChatBox("You cannot spectate players unless you stop nolifing first.", 255, 255, 255, true)
+			executeCommandHandler("fixforspecghostspec")
+			return
+		end
+		if Spectate.active then
+			if Spectate.savePos then
+				triggerServerEvent('onClientRequestSpectate', g_Me, false )
+				local realData = getElementData(localPlayer, "state")
+				setElementData(localPlayer, "state", realData)
+			end
+		else
+			if not Spectate.blockManual then
+				triggerServerEvent('onClientRequestSpectate', g_Me, true )
+				setElementData(localPlayer, "state", "spectating")
+			end
+		end
+	end
+	addCommandHandler('spectate',spectate)
+	addCommandHandler('Toggle spectator',spectate)
+	bindKey("b","down","Toggle spectator")
+
+10. Save race_client.lua file.
+11. Update race.zip file.
+12. Go to 'server-mods-deathmatch-resources-[gamemodes]-[race]-race.zip-race_server.lua'.
+13. Find the "function raceTimeout()" and add this before it:
+
+	addEvent("timesUpPalServer", true)
+
+14. Now add this after the function itself:
+
+	addEventHandler("timesUpPalServer", root, raceTimeout)
+
+15. At the very end of the file copy the below code:
+
+	addEvent("onRaceStateChanging",true)
+	function onRaceStateChanging(state)
+		if state == "PreGridCountdown" or state == "GridCountdown" then
+			for i, player in ipairs(getElementsByType('player')) do
+				setElementData(player, "isOnSpawn", true)
+			end
+		elseif state == "Running" then
+			for i, player in ipairs(getElementsByType('player')) do
+				setElementData(player, "isOnSpawn", false)
+			end
+		end
+	end
+	addEventHandler("onRaceStateChanging", g_Root, onRaceStateChanging)
+
+16. Save race_server.lua file.
+17. Update race.zip file.
+18. Go to your 'race_ghost' resource folder and inside the 'playback_server.lua' file put the following code at the end:
+	
+	function onResStart()
+		local ghostSpecResName = "race_ghost_spectate"
+		local ghostSpecRes = getResourceFromName(ghostSpecResName)
+		if ghostSpecRes then
+			if getResourceState(ghostSpecRes) == "running" then
+				restartResource(ghostSpecRes)
+			elseif getResourceState(ghostSpecRes) == "loaded" then
+				startResource(ghostSpecRes, true)
+			end
+		end
+	end
+	addEventHandler("onResourceStart", resourceRoot, onResStart)
+
+19. Save the 'playback_server.lua' file.
+20. Restart 'race', 'race_ghost' and 'race_ghost_spectate' resources.
+21. Happy nolifing :)

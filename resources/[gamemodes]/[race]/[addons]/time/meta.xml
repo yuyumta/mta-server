@@ -1,0 +1,6 @@
+<meta>
+
+	<info author="yuyu" version="1" description="Adds the commands /day (auto) and /night (auto). Both the commands also reset weather to 0 if its ID is more than 12." type="misc" />
+	<script src="time.lua" type="client" />
+	
+</meta>

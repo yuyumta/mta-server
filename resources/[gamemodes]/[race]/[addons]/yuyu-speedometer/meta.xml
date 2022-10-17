@@ -1,0 +1,8 @@
+<meta>
+	<info author="yuyu" version="1.0.0" name="yuyu-speedometer" description="Speedometer based off of nfs nos by 50p. and AcidbRain and blue speedometer by BinSlayer and lukum." />
+	<script src="c_util.lua" type="client" />
+	<script src="c_main.lua" type="client" />
+	<script src="c_settings.lua" type="client" />
+	<export function="show" type="client" />
+	<file src="msgothic.ttf"/>
+</meta>

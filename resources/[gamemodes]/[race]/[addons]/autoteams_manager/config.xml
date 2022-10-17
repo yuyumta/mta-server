@@ -1,0 +1,17 @@
+<teams>
+    <team name="uDka Racing Team" tag="[uDka]" color="#FFFFFF" aclGroup="-" required="tag"></team>
+    <team name="Legal Street Racers" tag="[LSR]" color="#0391FD" aclGroup="-" required="tag"></team>
+    <team name="National Kings Crew" tag="[NKC]" color="#004087" aclGroup="-" required="tag"></team>
+    <team name="Live For Speed" tag="LFS&apos;" color="#1F1F1F" aclGroup="-" required="tag"></team>
+    <team name="For Fuck Sake" tag="-ffs-" color="#FFA500" aclGroup="-" required="tag"></team>
+    <team name="Race Protection Bureau" tag="[RPB]" color="#C30C39" aclGroup="-" required="tag"></team>
+    <team name="Not Even Trying" tag="NET//" color="#000000" aclGroup="-" required="tag"></team>
+    <team name="Street Racing Xtreme" tag="SRX//" color="#426BD2" aclGroup="-" required="tag"></team>
+    <team name="Speed is King" tag="[SiK]" color="#00FF00" aclGroup="-" required="tag"></team>
+    <team name="Crazy Racers Family" tag="|CrF|" color="#fff000" aclGroup="-" required="tag"></team>
+    <team name="Sofa King Cool" tag="[SKC]" color="#FF6600" aclGroup="-" required="tag"></team>
+    <team name="Road Tearing Force" tag="[RTF]" color="#232b2b" aclGroup="-" required="tag"></team>
+    <team name="Awesome Quality" tag="-AQ-" color="#FF0019" aclGroup="-" required="tag"></team>
+    <team name="Accelerate For Erect" tag="[AFE]" color="#800080" aclGroup="-" required="tag"></team>
+    <team name="Full Control" tag="FC|" color="#72FF00" aclGroup="-" required="tag"></team>
+</teams>
